@@ -25,6 +25,8 @@ public class ObjectScript : MonoBehaviour {
         MeshFilter meshFilter = GetComponent<MeshFilter>();
         ModelLoader.mModel model = ModelLoader.loadModel(filepath, depthFilepath);
         meshFilter.mesh = model.mesh;
+        //set large bounds to fix culling of object when modifying model
+        meshFilter.mesh.bounds = new UnityEngine.Bounds(new Vector3(0, 0, 0), new Vector3(1, 1, 1) * 1000);
         collider = GetComponent<MeshCollider>(); //.sharedMesh = model.mesh;
         GetComponent<MeshRenderer>().material.mainTexture = model.tex;
 

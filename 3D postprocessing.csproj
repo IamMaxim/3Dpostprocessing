@@ -84,13 +84,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AddObjectsPanelScript.cs" />
-    <Compile Include="Assets\CameraScript.cs" />
-    <Compile Include="Assets\FileEntry.cs" />
-    <Compile Include="Assets\FileSelectionScript.cs" />
-    <Compile Include="Assets\ModelLoader.cs" />
-    <Compile Include="Assets\ObjectScript.cs" />
-    <Compile Include="Assets\SettingsPanelScript.cs" />
+    <Compile Include="Assets\Scripts\AddObjectEntryScript.cs" />
+    <Compile Include="Assets\Scripts\AddObjectsPanelScript.cs" />
+    <Compile Include="Assets\Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\FileEntry.cs" />
+    <Compile Include="Assets\Scripts\FileSelectionScript.cs" />
+    <Compile Include="Assets\Scripts\ModelLoader.cs" />
+    <Compile Include="Assets\Scripts\ObjectScript.cs" />
+    <Compile Include="Assets\Scripts\SettingsPanelScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
