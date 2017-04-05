@@ -48,7 +48,10 @@ public class ObjectScript : MonoBehaviour {
         };
         collider.sharedMesh = mesh;
 
-        previewTexture = GameObject.Find("PreviewCamera").GetComponent<Camera>().targetTexture =
+        GameObject previewCamera = GameObject.Find("PreviewCamera");
+        if (!previewCamera.GetComponent<Camera>().enabled)
+            previewCamera.GetComponent<Camera>().enabled = true;
+        previewTexture = previewCamera.GetComponent<Camera>().targetTexture =
             new RenderTexture((int) w, (int) h, 24, RenderTextureFormat.ARGB32);
         GameObject.Find("PreviewTexture").GetComponent<RawImage>().texture = previewTexture;
         //rt.width = (int)w;

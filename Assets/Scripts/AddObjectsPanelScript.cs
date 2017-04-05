@@ -10,6 +10,7 @@ public class AddObjectsPanelScript : MonoBehaviour {
     public List<GameObject> objects;
     public GameObject listGO;
     public GameObject listPrefab;
+    public GameObject holderPrefab;
 
 	void Start () {
 		animator = GetComponent<Animator> ();
@@ -17,7 +18,7 @@ public class AddObjectsPanelScript : MonoBehaviour {
 
         int x = 10, y = -20, step = -30;
         foreach (GameObject prefab in objects) {
-            GameObject o = GameObject.Instantiate(listPrefab);
+                       GameObject o = GameObject.Instantiate(listPrefab);
             o.GetComponent<Text>().text = prefab.name;
             RectTransform rect = o.GetComponent<RectTransform>();
             rect.position = new Vector3(x, y, parentRect.position.z);

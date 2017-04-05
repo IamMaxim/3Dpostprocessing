@@ -64,7 +64,7 @@ public class ModelLoader : MonoBehaviour {
         if (File.Exists(fileName)) {
             fileData = File.ReadAllBytes(fileName);
             tex = new Texture2D(2, 2);
-            tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
+            tex.LoadImage(fileData); //this will auto-resize the texture dimensions.
         }
         return tex;
     }

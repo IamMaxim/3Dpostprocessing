@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class AddObjectEntryScript : MonoBehaviour {
     public GameObject go;
+    public GameObject holderPrefab;
+
+    void Start() {
+        holderPrefab = GameObject.Find("AddObjectsPanel").GetComponent<AddObjectsPanelScript>().holderPrefab;
+    }
 
     public void click() {
-        GameObject.Instantiate(go);
+        GameObject holder = GameObject.Instantiate(holderPrefab);
+        GameObject prefabObject = GameObject.Instantiate(go);
+        prefabObject.transform.SetParent(holder.transform);
     }
 }

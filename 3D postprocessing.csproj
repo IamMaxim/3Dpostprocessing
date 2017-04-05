@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\FileEntry.cs" />
     <Compile Include="Assets\Scripts\FileSelectionScript.cs" />
     <Compile Include="Assets\Scripts\ModelLoader.cs" />
+    <Compile Include="Assets\Scripts\ObjectHolderScript.cs" />
     <Compile Include="Assets\Scripts\ObjectScript.cs" />
     <Compile Include="Assets\Scripts\SettingsPanelScript.cs" />
   </ItemGroup>
